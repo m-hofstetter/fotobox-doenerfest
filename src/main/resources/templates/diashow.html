@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diashow</title>
+    <style>
+        img {
+            position: absolute;
+            width: 100vw;
+            margin: auto auto;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        body {
+            background-color: black;
+            margin: 0 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<img src="randomImage">
+<script>
+    nextImage()
+
+    function nextImage() {
+        setTimeout(nextImage, 5000)
+        document.querySelector("img").src = "randomImage?t=" + new Date().getTime();
+    }
+</script>
+</body>
+</html>

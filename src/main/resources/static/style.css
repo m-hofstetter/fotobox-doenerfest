@@ -1,0 +1,91 @@
+body {
+    background-color: black;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+#message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(236, 223, 203, 0.8);
+    padding: 2em 4em 2em 4em;
+    box-shadow: 0 0 100px 10px rgba(0,0,0,1);
+}
+
+#message span img {
+    width: 30vw;
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30vw;
+    font-family: "myriad pro";
+    color: #810a1a;
+    -webkit-text-stroke: 10px #ecdfcb;
+    text-shadow: 0 0 100px 10px rgba(0,0,0,1);
+}
+
+
+video {
+    position: absolute;
+    width: 100vw;
+    margin: auto auto;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.still_image {
+    position: absolute;
+    margin: auto auto;
+    opacity: 0;
+    width: 100vw;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.lightning {
+    position: absolute;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    margin: auto auto;
+    opacity: 0;
+}
+
+.lightning_fadeout {
+    animation: fadeout 1s ease;
+    transition: .2s
+}
+
+.fadeout {
+    animation: fadeout 5s ease;
+    transition: .2s
+}
+
+.invisible {
+    display: none;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@font-face {
+    font-family: "Myriad Pro";
+    src: url(myriadpro-boldcond.otf);
+}
